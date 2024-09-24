@@ -5,19 +5,19 @@ using namespace std;
 int main()
 {
     cout << "Quadratic Equation" << endl;
+    cout << "===================" <<endl;
     
-    int a, b, c;
-    	cout << "Type a number for coefficients a : ";
-    	cin >> a;
-    	cout << "Type a number for coefficients b : ";
-    	cin >> b;
-    	cout << "Type a number for coefficients c : ";
-    	cin >> c;
+    int a = 2;
+    int b = 1;
+    int c = -2;
+    	cout << "Type a number for coefficients a : "<<a<<endl;
+    	cout << "Type a number for coefficients b : "<<b<<endl;
+    	cout << "Type a number for coefficients c : "<<c<<endl;
     
     	cout << "Quadratic Equation" << endl;
    	cout << a << "x^2 + " << b << "x + " << c << " = 0" << endl;
     
-    int d;
+    int d = -17;
     d = ((b)*(b)) - (4*a*c);
     	cout << "Here the discriminant from the equation above : " << d << endl;
  
@@ -42,5 +42,23 @@ int main()
         cout << "There are no real roots" << endl;
     }
     
+    int expectedA = 2;
+    int expectedB = 1;
+    int expectedC = -2;
+    int expectedD = -17;
+
+    bool testPassed = false;
+    if(expectedA==a) testPassed = true;
+    if(expectedB==b) testPassed = true;
+    if(expectedC==c) testPassed = true;
+    if(expectedD==d) testPassed = true;
+
+   if(testPassed){
+        cout<<"Test Passed"<<endl;
+    }
+    else{
+        cout<<"Test Failed"<<endl;
+    }
+
     return 0;
 }

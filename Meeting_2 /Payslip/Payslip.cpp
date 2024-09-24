@@ -30,11 +30,10 @@ int main()
     	net_salary = gross_salary - (tax + installment + insurance);
     	cout << "Net Salary: Rp" << net_salary;
    
- if (net_salary<0){
+    if (net_salary<0){
         cout << "Your money management needs to be monitored and corrected :(";
     }
-    else {
-        
+    else {   
     }
     return 0;
 }

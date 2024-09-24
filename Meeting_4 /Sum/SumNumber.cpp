@@ -4,6 +4,7 @@ using namespace std;
 int main() {
     int number;
     int i;
+    
     cout << "Enter the number to calculate : ";
     cin >> number;
     
