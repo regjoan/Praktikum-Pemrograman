@@ -5,9 +5,8 @@ int main()
 {
     cout<<"Largest Number"<<endl;
     cout<<"================"<<endl;
-    
+
     cout<<"Enter a number : "<<endl;
-    
     int a = 9;
     int b = 3;
     int c = 2;
@@ -24,12 +23,13 @@ int main()
     else{
         cout<<"Largest number : "<<c<<endl;
     }
-
+    
     int expectedA = 9;
     int expectedB = 3;
     int expectedC = 2;
 
     bool testPassed = false;
+
     if(expectedA==a) testPassed = true;
     if(expectedB==b) testPassed = true;
     if(expectedC==c) testPassed = true;
@@ -40,7 +40,6 @@ int main()
     else{
         cout<<"Test Failed"<<endl;
     }
-
     return 0;
 }
 

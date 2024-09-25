@@ -6,17 +6,14 @@ int main() {
     cout<<"Reverse An Array"<<endl;
     cout<<"================"<<endl;
 
-    vector<int> vec;
-    int number = 1;2;3;4;5;
+    vector<int> vec = {1, 2, 3, 4, 5};
     int range = 5;
 
-    cout << "Input the range of array : ";
-    cin >> range;
+    cout << "Input the range of array : " <<endl;
 
     cout << "Enter " << range << " numbers:" << endl;
     for (int i=0; i<range; i++) {
-        cin >> number;
-        vec.push_back(number);
+        cout << vec[i] << " ";
     }
 
     for(int i=0; i<range/2; i++){
@@ -29,11 +26,11 @@ int main() {
     }
     cout << endl;
 
-    int expectedNumber = 1;2;3;4;5;
+    vector<int> expectedVec = {1, 2, 3, 4, 5};
     int expectedrange = 5;
 
     bool testPassed = false;
-    if(expectedNumber==number) testPassed = true;
+    if(expectedVec==vec) testPassed = true;
     if(expectedrange==range) testPassed = true;
 
     if(testPassed){
