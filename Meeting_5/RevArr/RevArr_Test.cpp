@@ -15,17 +15,14 @@ int main() {
     for (int i=0; i<range; i++) {
         cout << vec[i] << " ";
     }
-
     for(int i=0; i<range/2; i++){
         swap(vec[i], vec[range-1-i]);
     }
-
     cout << "Reversed Vector: ";
     for (int i=0; i<vec.size(); i++) {
         cout << vec[i]<< " ";
     }
-    cout << endl;
-
+    
     vector<int> expectedVec = {1, 2, 3, 4, 5};
     int expectedrange = 5;
 
@@ -39,7 +36,5 @@ int main() {
     else{
         cout<<"Test Failed"<<endl;
     }
-
     return 0;
-    
 }
