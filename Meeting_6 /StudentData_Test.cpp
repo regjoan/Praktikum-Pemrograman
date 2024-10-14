@@ -35,7 +35,7 @@ int main() {
         cout<<"UTS value : ";
         theStudent[1].midterm = 86;
         cout<<"UAS value : ";
-        theStudent[1].final = 97;
+        theStudent[1].final = 90;
         cout<<endl;
 
         cout<<"NIM : ";
@@ -58,8 +58,21 @@ int main() {
         cout<<endl;
     }
     
-    int expected = 3;
+    int expectedAverage101 = 85;
+    int expectedAverage102 = 88;
+    int expectedAverage103 = 92;
+
     bool test Passed = false;
+    if(expectedNumber101==theStudent[0].average) testPassed = true;
+    if(expectedNumber102==theStudent[1].average) testPassed = true;
+    if(expectedNumber103==theStudent[2].average) testPassed = true;
+
+    if(testPassed){
+        cout<<"Test Passed"<<endl;
+    }
+    else{
+        cout<<"Test Failed"<<endl;
+    } 
     
     system("Pause");
     return 0;
