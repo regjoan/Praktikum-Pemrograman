@@ -62,10 +62,10 @@ int main() {
     int expectedAverage102 = 88;
     int expectedAverage103 = 92;
 
-    bool test Passed = false;
-    if(expectedNumber101==theStudent[0].average) testPassed = true;
-    if(expectedNumber102==theStudent[1].average) testPassed = true;
-    if(expectedNumber103==theStudent[2].average) testPassed = true;
+    bool testPassed = false;
+    if(expectedAverage101==theStudent[0].average) testPassed = true;
+    if(expectedAverage102==theStudent[1].average) testPassed = true;
+    if(expectedAverage103==theStudent[2].average) testPassed = true;
 
     if(testPassed){
         cout<<"Test Passed"<<endl;
