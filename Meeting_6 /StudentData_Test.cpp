@@ -11,7 +11,7 @@ int main() {
 
     StudentRec theStudent[50];
     
-    int n;  
+    int n = 3;  
     
     cout << "Student Average Score"<<endl;
     cout<<"================="<<endl;
@@ -19,15 +19,31 @@ int main() {
     cout<<"How many students? ";
     cin>>n;
     
-    cout<<"Input the data"<<endl;
+    cout<<"The inputed data"<<endl;
     
     for(int i=0; i<n; i++){
         cout<<"NIM : ";
-        cin>>theStudent[i].nim;
+        theStudent[0].nim = 101;
         cout<<"UTS value : ";
-        cin>>theStudent[i].midterm;
+        theStudent[0].midterm = 80;
         cout<<"UAS value : ";
-        cin>>theStudent[i].final;
+        theStudent[0].final = 90;
+        cout<<endl;
+
+        cout<<"NIM : ";
+        theStudent[1].nim = 102;
+        cout<<"UTS value : ";
+        theStudent[1].midterm = 86;
+        cout<<"UAS value : ";
+        theStudent[1].final = 97;
+        cout<<endl;
+
+        cout<<"NIM : ";
+        theStudent[2].nim = 103;
+        cout<<"UTS value : ";
+        theStudent[2].midterm = 89;
+        cout<<"UAS value : ";
+        theStudent[2].final = 95;
         cout<<endl;
     }
         
