@@ -58,6 +58,9 @@ int main() {
         cout<<endl;
     }
     
+    int expected = 3;
+    bool test Passed = false;
+    
     system("Pause");
     return 0;
 }
