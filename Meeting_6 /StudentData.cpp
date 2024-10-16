@@ -3,7 +3,7 @@ using namespace std;
     
 int main() {
     struct StudentRec{
-        string nim;
+        int nim;
         float midterm;
         float final;
         int average;
