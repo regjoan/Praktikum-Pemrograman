@@ -58,7 +58,5 @@ int main() {
     else{
         cout<<"Test Failed"<<endl;
     } 
-    
-    system("Pause");
     return 0;
 }

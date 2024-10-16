@@ -41,7 +41,5 @@ int main() {
         cout<<endl;
         cout<<endl;
     }
-    
-    system("Pause");
     return 0;
 }
