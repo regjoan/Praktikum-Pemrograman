@@ -12,7 +12,12 @@ using namespace std;
     
     int main(){
         cout<<"Simple Mathematic Operation"<<endl;
-        float number1 = 5, number2 = 7;
+        float number1, number2;
+        cout<<"Enter number 1 : ";
+        cin>>number1;
+        cout<<"Enter number 2 : ";
+        cin>>number2;
+
         float add, diff;
         
         add = addition(number1, number2);

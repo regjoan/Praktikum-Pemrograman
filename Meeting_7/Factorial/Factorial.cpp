@@ -11,7 +11,8 @@ using namespace std;
 
 int main() {
     cout<<"Factorial Calculator"<<endl;
-    int x = 5;
+    cout<<"Enter number : ";
+    int x;
+    cin>>x;
     cout<<"Factorial result : "<<factorial(x)<<endl;
-    return 0;
 }
