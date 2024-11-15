@@ -1,0 +1,103 @@
+#include <iostream>
+#include <string>
+#include <cassert>
+using namespace std;
+
+struct dataList {
+    long long NISN;
+    string name;
+    int value;
+};
+
+void showData(dataList data[], int n) {
+    for (int i = 0; i < n; i++) {
+        cout << data[i].NISN << "\t" << data[i].name << "\t" << data[i].value << endl;
+    }
+}
+
+void insertionSortNISN(dataList data[], int n) {
+    for (int i = 1; i < n; i++) {
+        dataList key = data[i];
+        int j = i - 1;
+
+        while (j >= 0 && data[j].NISN < key.NISN) {
+            data[j + 1] = data[j];
+            j = j - 1;
+        }
+        data[j + 1] = key;
+    }
+}
+
+void insertionSortValue(dataList data[], int n) {
+    for (int i = 1; i < n; i++) {
+        dataList key = data[i];
+        int j = i - 1;
+
+        while (j >= 0 && data[j].value < key.value) {
+            data[j + 1] = data[j];
+            j = j - 1;
+        }
+        data[j + 1] = key;
+    }
+}
+
+void checkSortingByNISN(dataList data[], int n) {
+    for (int i = 1; i < n; i++) {
+        assert(data[i - 1].NISN >= data[i].NISN);
+    }
+}
+
+void checkSortingByValue(dataList data[], int n) {
+    for (int i = 1; i < n; i++) {
+        assert(data[i - 1].value >= data[i].value);
+    }
+}
+
+int main() {
+    dataList data[] = {
+        {9960312699, "Handi Ramadhan", 90},
+        {9963959682, "Rio Alfandra", 55},
+        {9950310962, "Ronaldo Valentino Uneputty", 80},
+        {9970272750, "Achmad Yaumil Fadjri R", 60},
+        {9970293945, "Alivia Rahma Pramesti", 70},
+        {9952382180, "Ari Lutfianto", 65},
+        {9965653989, "Arief Budiman", 60}
+    };
+    int n = sizeof(data) / sizeof(data[0]);
+
+    cout << "Data Before Sorting" << endl;
+    cout << "===================" << endl;
+    showData(data, n);
+    cout << endl;
+
+    insertionSortNISN(data, n);
+    cout << "Data Sorting by NISN (Descending)" << endl;
+    cout << "===================" << endl;
+    showData(data, n);
+    checkSortingByNISN(data, n);
+    cout << "Passed NISN Sorting Test!" << endl;
+
+    cout << endl;
+
+    dataList dataReset[] = {
+        {9960312699, "Handi Ramadhan", 90},
+        {9963959682, "Rio Alfandra", 55},
+        {9950310962, "Ronaldo Valentino Uneputty", 80},
+        {9970272750, "Achmad Yaumil Fadjri R", 60},
+        {9970293945, "Alivia Rahma Pramesti", 70},
+        {9952382180, "Ari Lutfianto", 65},
+        {9965653989, "Arief Budiman", 60}
+    };
+    for (int i = 0; i < n; i++) {
+        data[i] = dataReset[i];
+    }
+
+    insertionSortValue(data, n);
+    cout << "Data Sorting by Value (Descending)" << endl;
+    cout << "===================" << endl;
+    showData(data, n);
+    checkSortingByValue(data, n);
+    cout << "Passed Value Sorting Test!" << endl;
+
+    return 0;
+}
